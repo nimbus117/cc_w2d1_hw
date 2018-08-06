@@ -14,4 +14,9 @@ class Library
     end
   return nil
   end
+
+  def rental_details_by_title(title)
+    book = book_by_title(title)
+    return book[:rental_details] if book != nil
+  end
 end
