@@ -26,4 +26,9 @@ class StudentTest < Minitest:: Test
     student.set_cohort('G24')
     assert_equal('G24', student.cohort)
   end
+
+  def test_student_talks
+    student = CCStudent.new('James', 'E24')
+    assert_equal('I can talk!', student.talk)
+  end
 end
