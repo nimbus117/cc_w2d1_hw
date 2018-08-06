@@ -23,4 +23,12 @@ class Library
   def add_book(book)
     @books.push(book)
   end
+
+  def set_rental_details(title, name, date)
+    book = book_by_title(title)
+    if book != nil
+      book[:rental_details][:student_name] = name
+      book[:rental_details][:date] = date
+    end
+  end
 end
