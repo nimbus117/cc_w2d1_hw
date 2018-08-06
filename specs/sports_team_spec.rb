@@ -45,4 +45,16 @@ class SportsTeamTest < Minitest::Test
     team = SportsTeam.new('Falcons', ['Bob','Sally','Jim'], 'Wilma')
     assert_equal(0, team.score)
   end
+
+  def test_score__win
+    team = SportsTeam.new('Falcons', ['Bob','Sally','Jim'], 'Wilma')
+    team.result('win')
+    assert_equal(1, team.score)
+  end
+
+  def test_score__lose
+    team = SportsTeam.new('Falcons', ['Bob','Sally','Jim'], 'Wilma')
+    team.result('lose')
+    assert_equal(0, team.score)
+  end
 end
