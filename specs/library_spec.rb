@@ -39,4 +39,8 @@ class LibraryTest < Minitest::Test
   def test_get_books()
     assert_equal(@books, @library.books)
   end
+
+  def test_get_book_info_by_title
+    assert_equal(@books[1], @library.book_by_title('ready_player_one'))
+  end
 end
