@@ -31,4 +31,9 @@ class StudentTest < Minitest:: Test
     student = CCStudent.new('James', 'E24')
     assert_equal('I can talk!', student.talk)
   end
+
+  def test_favourite_language
+    student = CCStudent.new('James', 'E24')
+    assert_equal('I love JavaScript', student.favourite_language('JavaScript'))
+  end
 end
