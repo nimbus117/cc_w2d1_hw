@@ -72,4 +72,11 @@ class LibraryTest < Minitest::Test
     book = @library.book_by_title('the_temporal_void')
     assert_equal(@new_book, book)
   end
+
+  def test_set_rental_details
+    @library.set_rental_details('lord_of_the_rings', 'Alvaro', '13/08/18')
+    expected_details = {student_name: 'Alvaro', date: '13/08/18'}
+    actual_details = @library.rental_details_by_title('lord_of_the_rings')
+    assert_equal(expected_details, actual_details)
+  end
 end
