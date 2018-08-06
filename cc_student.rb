@@ -21,4 +21,8 @@ class CCStudent
   def set_cohort(new_cohort)
     @cohort = new_cohort
   end
+
+  def talk()
+    return 'I can talk!'
+  end
 end
