@@ -48,13 +48,13 @@ class SportsTeamTest < Minitest::Test
 
   def test_score__win
     team = SportsTeam.new('Falcons', ['Bob','Sally','Jim'], 'Wilma')
-    team.result('win')
+    team.set_result('win')
     assert_equal(1, team.score)
   end
 
   def test_score__lose
     team = SportsTeam.new('Falcons', ['Bob','Sally','Jim'], 'Wilma')
-    team.result('lose')
+    team.set_result('lose')
     assert_equal(0, team.score)
   end
 end

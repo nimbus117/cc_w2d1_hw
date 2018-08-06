@@ -23,6 +23,13 @@ class SportsTeam
     end
     return false
   end
+
+  def set_result(result)
+    if result == 'win'
+      @score += 1
+    end
+  end
+
 #  def name
 #    return @name
 #  end
