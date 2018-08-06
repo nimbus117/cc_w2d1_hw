@@ -49,20 +49,20 @@ class LibraryTest < Minitest::Test
     assert_equal(@books, @library.books)
   end
 
-  def test_get_book_info_by_title
+  def test_get_book_by_title
     assert_equal(@books[1], @library.book_by_title('ready_player_one'))
   end
 
-  def test_get_book_info_by_title__no_match
+  def test_get_book_by_title__no_match
     assert_nil(@library.book_by_title('the_temporal_void'))
   end
 
-  def test_get_book_rental_details_by_title
+  def test_get_rental_details_by_title
     rental_details = @library.rental_details_by_title('the_dreaming_void')
     assert_equal(@books[2][:rental_details], rental_details)
   end
 
-  def test_get_book_rental_details_by_title__no_match
+  def test_get_rental_details_by_title__no_match
     rental_details = @library.rental_details_by_title('armada')
     assert_nil(rental_details)
   end
