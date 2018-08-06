@@ -1,6 +1,6 @@
-require(minitest/autorun)
-require(minitest/rg)
-require_relative(../cc_student.rb)
+require('minitest/autorun')
+require('minitest/rg')
+require_relative('../cc_student.rb')
 
 
 class StudentTest < Minitest:: Test
