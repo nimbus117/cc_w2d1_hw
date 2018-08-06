@@ -43,4 +43,8 @@ class LibraryTest < Minitest::Test
   def test_get_book_info_by_title
     assert_equal(@books[1], @library.book_by_title('ready_player_one'))
   end
+
+  def test_get_book_info_by_title__no_match
+    assert_nil(@library.book_by_title('the_temporal_void'))
+  end
 end
