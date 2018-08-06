@@ -24,4 +24,10 @@ class SportsTeamTest < Minitest::Test
     team.coach=('Betty')
     assert_equal('Betty', team.coach)
   end
+
+  def test_add_new_player
+    team = SportsTeam.new('Falcons', ['Bob','Sally','Jim'], 'Wilma')
+    team.new_player('Fred')
+    assert_equal(4, team.players.length)
+  end
 end
