@@ -19,4 +19,8 @@ class Library
     book = book_by_title(title)
     return book[:rental_details] if book != nil
   end
+
+  def add_book(book)
+    @books.push(book)
+  end
 end
