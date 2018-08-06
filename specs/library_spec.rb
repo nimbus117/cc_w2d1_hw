@@ -9,6 +9,7 @@ class LibraryTest < Minitest::Test
     @books = [
       {
         title: "lord_of_the_rings",
+        author: "J. R. R. Tolkien",
         rental_details: {
          student_name: "Jeff",
          date: "01/12/16"
@@ -16,6 +17,7 @@ class LibraryTest < Minitest::Test
       },
       {
         title: "ready_player_one",
+        author: "Ernest Cline",
         rental_details: {
          student_name: "James",
          date: "01/02/17"
@@ -23,6 +25,7 @@ class LibraryTest < Minitest::Test
       },
       {
         title: "the_dreaming_void",
+        author: "Peter F. Hamilton",
         rental_details: {
          student_name: "Laura",
          date: "21/10/18"
