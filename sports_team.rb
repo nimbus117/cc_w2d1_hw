@@ -14,6 +14,14 @@ class SportsTeam
     @players.push(new_player)
   end
 
+  def check_player?(player_name)
+    for player in @players
+      if player == player_name
+        return true
+      end
+    end
+    return false
+  end
 #  def name
 #    return @name
 #  end
