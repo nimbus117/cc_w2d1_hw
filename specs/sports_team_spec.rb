@@ -30,4 +30,14 @@ class SportsTeamTest < Minitest::Test
     team.add_new_player('Fred')
     assert_equal(4, team.players.length)
   end
+
+  def test_check_player_by_name__true
+    team = SportsTeam.new('Falcons', ['Bob','Sally','Jim'], 'Wilma')
+    assert_equal(true, team.check_player?('Jim'))
+  end
+
+  def test_check_player_by_name__false
+    team = SportsTeam.new('Falcons', ['Bob','Sally','Jim'], 'Wilma')
+    assert_equal(false, team.check_player?('Fred'))
+  end
 end
