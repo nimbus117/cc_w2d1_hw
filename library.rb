@@ -12,5 +12,6 @@ class Library
         return book
       end
     end
+  return nil
   end
 end
