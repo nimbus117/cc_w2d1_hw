@@ -34,6 +34,14 @@ class LibraryTest < Minitest::Test
     ]
 
     @library = Library.new(@books)
+
+    @new_book = {
+      title: "the_temporal_void",
+      author: "Peter F. Hamilton",
+      rental_details: {
+       student_name: "",
+       date: ""
+    }
   end
 
   def test_get_books()
@@ -56,5 +64,11 @@ class LibraryTest < Minitest::Test
   def test_get_book_rental_details_by_title__no_match
     rental_details = @library.rental_details_by_title('armada')
     assert_nil(rental_details)
+  end
+
+  def test_add_book
+    @library.add_book(@new_book)
+    book = @library.book_by_title('the_temporal_void')
+    assert_equal(@new_book, book)
   end
 end
